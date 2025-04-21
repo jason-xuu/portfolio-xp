@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import StartTooltip from "./StartTooltip";
 import Taskbar from "./Taskbar";
 import DesktopIcon from "./DesktopIcon";
 import Window from "./Window";
@@ -209,6 +210,7 @@ const Desktop = () => {
             onDrag={(x, y) => updateWindowPosition(window.id, x, y)} // ✅ NEW PROP
           />
         ))}
+        <StartTooltip />
       </div>
 
       {/* Taskbar */}
