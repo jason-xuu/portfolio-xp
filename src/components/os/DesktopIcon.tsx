@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useClickSound } from "@/utils/sfx";
 
 interface DesktopIconProps {
   title: string;
@@ -12,6 +13,7 @@ const DesktopIcon = ({ title, icon, onClick }: DesktopIconProps) => {
   const [isClicked, setIsClicked] = useState(false);
   const [doubleClickTimer, setDoubleClickTimer] = useState<NodeJS.Timeout | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { playClickSound } = useClickSound();
 
   const handleClick = () => {
     // First click starts timer for double-click detection
@@ -29,6 +31,7 @@ const DesktopIcon = ({ title, icon, onClick }: DesktopIconProps) => {
       setIsAnimating(true);
       // Animate before opening window
       setTimeout(() => {
+        playClickSound();
         onClick();
         setIsAnimating(false);
       }, 150);

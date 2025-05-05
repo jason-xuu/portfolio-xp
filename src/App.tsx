@@ -10,41 +10,6 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    const context = new (window.AudioContext || (window as any).webkitAudioContext)();
-    let source: AudioBufferSourceNode | null = null;
-
-    const LOOP_END = 19.336;
-
-    fetch("/audio/lotuswaters.ogg")
-      .then((res) => res.arrayBuffer())
-      .then((arrayBuffer) => context.decodeAudioData(arrayBuffer))
-      .then((audioBuffer) => {
-        source = context.createBufferSource();
-        source.buffer = audioBuffer;
-
-        source.loop = true;
-        source.loopStart = 0.0;
-        source.loopEnd = LOOP_END;
-
-        source.connect(context.destination);
-
-        const resumeAudio = () => {
-          context.resume().then(() => {
-            source?.start(0);
-          });
-
-          window.removeEventListener("click", resumeAudio);
-        };
-
-        window.addEventListener("click", resumeAudio);
-      });
-
-    return () => {
-      source?.stop();
-    };
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

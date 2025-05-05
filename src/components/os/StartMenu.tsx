@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { WindowType } from "@/types/os-types";
+import { useClickSound } from "@/utils/sfx"; 
 
 interface StartMenuProps {
   onItemClick: (window: WindowType) => void;
 }
 
 const StartMenu = ({ onItemClick }: StartMenuProps) => {
+  const { playClickSound } = useClickSound(); 
+
   const menuItems = [
     {
       icon: "👤",
@@ -117,11 +120,12 @@ const StartMenu = ({ onItemClick }: StartMenuProps) => {
 
       {/* Menu Items */}
       <div className="p-2">
-        {menuItems.map((item, index) => (
+        {menuItems.map((item) => (
           <div
             key={item.window.id}
             className="flex items-center p-2 hover:bg-blue-100 rounded-md cursor-pointer transition-colors"
             onClick={() => {
+              playClickSound(); // play click on item select
               onItemClick(item.window);
             }}
           >
@@ -135,7 +139,8 @@ const StartMenu = ({ onItemClick }: StartMenuProps) => {
       <div className="p-2 border-t border-gray-300 flex justify-between items-center">
         <div
           className="flex items-center p-2 hover:bg-blue-100 rounded-md cursor-pointer"
-          onClick={() =>
+          onClick={() => {
+            playClickSound(); // play click on "About This Site"
             onItemClick({
               id: "about-window",
               title: "About This Site",
@@ -145,8 +150,8 @@ const StartMenu = ({ onItemClick }: StartMenuProps) => {
               isMinimized: false,
               isMaximized: false,
               position: { x: 200, y: 200 },
-            })
-          }
+            });
+          }}
         >
           <span className="text-xl mr-2">ℹ️</span>
           <span className="text-sm">About This Site</span>

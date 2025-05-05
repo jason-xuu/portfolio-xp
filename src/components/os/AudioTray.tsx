@@ -1,22 +1,27 @@
-// src/components/os/AudioTray.tsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAudio } from "@/context/AudioContext";
 
 const AudioTray = () => {
-  const [isMuted, setIsMuted] = useState(false);
-  const [isSfxMuted, setIsSfxMuted] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(true);
+  const {
+    isMusicMuted,
+    isSfxMuted,
+    toggleMusic,
+    toggleSfx
+  } = useAudio();
 
-  const toggleMute = () => setIsMuted(!isMuted);
-  const toggleSfx = () => setIsSfxMuted(!isSfxMuted);
+  const [showTooltip, setShowTooltip] = useState(true);
 
   return (
     <div className="relative flex items-center space-x-1">
-      <button onClick={toggleMute} className="text-xl hover:opacity-80">
-        {isMuted ? "🔇" : "🔊"}
-      </button>
+      {/* LEFT BUTTON: SFX (mouse click sounds) */}
       <button onClick={toggleSfx} className="text-xl hover:opacity-80">
-        {isSfxMuted ? "🚫🎵" : "🎵"}
+        {isSfxMuted ? "🔇" : "🔊"}
+      </button>
+
+      {/* RIGHT BUTTON: BACKGROUND MUSIC */}
+      <button onClick={toggleMusic} className="text-xl hover:opacity-80">
+        {isMusicMuted ? "🚫🎵" : "🎵"}
       </button>
 
       <AnimatePresence>
@@ -42,8 +47,6 @@ const AudioTray = () => {
             <p className="text-sm mt-1">
               Use these icons to mute/unmute sound effects and system audio.
             </p>
-
-            {/* Pointer triangle */}
             <div className="absolute -bottom-2 right-6 w-4 h-4 bg-yellow-100 border-l border-b border-yellow-300 rotate-45 z-[-1]" />
           </motion.div>
         )}
