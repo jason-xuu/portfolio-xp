@@ -1,39 +1,38 @@
-
 import React, { useState } from 'react';
 
 const ReferencesContent: React.FC = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Alex Johnson",
-      role: "Engineering Manager",
-      company: "Tech Innovations Inc.",
-      image: "👨‍💼",
-      text: "Jason is one of the most talented developers I've had the pleasure to work with. His problem-solving skills and attention to detail make him an invaluable team member. He consistently delivers high-quality code and is always willing to help others."
+      name: "Rain Duan",
+      role: "Senior Software Dev",
+      company: "Doordash",
+      image: "👦🏻",
+      text: "Jason's passion for coding and problem-solving is evident in every project he tackles. His dedication as a software developer is truly inspiring."
     },
     {
       id: 2,
-      name: "Sarah Chen",
-      role: "Lead Developer",
-      company: "DataSolutions Corp",
-      image: "👩‍💻",
-      text: "Working with Jason was a great experience. He approaches problems methodically and creates elegant solutions. His understanding of both frontend and backend technologies allowed our project to be completed ahead of schedule. I would gladly work with him again."
+      name: "Damien Dhingra",
+      role: "Co-Founder/COO",
+      company: "Omnisynk AI",
+      image: "👨🏾",
+      text: "Working with Jason has been a game changer. His attention to detail and drive to constantly improve as a developer are unmatched."
     },
     {
       id: 3,
-      name: "Dr. Michael Lee",
-      role: "Professor",
-      company: "University of Technology",
-      image: "👨‍🏫",
-      text: "As Jason's academic advisor, I witnessed his exceptional dedication to learning and applying complex concepts. His research contributions were significant, and his ability to explain technical concepts clearly sets him apart. He has a bright future ahead."
+      name: "Joann J. Hill",
+      role: "Senior Federal Executive",
+      company: "U.S. Department of Commerce",
+      image: "👩🏿‍💼",
+      text: "Jason demonstrated exceptional initiative and technical acumen. His work exploring generative AI and distributed storage technologies led to actionable insights for minority business enterprises, including a detailed analysis report with federal market applications. His contributions supported our mission to drive innovation and promote technology adoption across underserved business communities."
     },
     {
       id: 4,
-      name: "Emily Rodriguez",
-      role: "Product Manager",
-      company: "SoftServe Solutions",
-      image: "👩‍💼",
-      text: "Jason's technical expertise combined with his understanding of user needs made him an essential part of our product development. He's not just a coder – he thinks about the big picture and how technology can solve real problems."
+      name: "Chengxin Xu",
+      role: "Assistant Professor",
+      company: "Seattle University",
+      image: "👨🏻‍🎓",
+      text: "Jason provided valuable academic guidance during my data-driven research on retirement communities. His support was key as I automated data collection with Python, conducted statistical analysis in Excel, and visualized trends with pandas and matplotlib. His feedback helped me present clear, actionable insights to stakeholders while maintaining robust version control using Git."
     }
   ];
 
