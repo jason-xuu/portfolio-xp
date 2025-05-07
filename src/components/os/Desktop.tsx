@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import StartTooltip from "./StartTooltip";
+import StartTooltip from "./StartToolTip";
 import Taskbar from "./Taskbar";
 import DesktopIcon from "./DesktopIcon";
 import Window from "./Window";
@@ -78,7 +77,14 @@ const Desktop = () => {
     setIsStartMenuOpen(!isStartMenuOpen);
   };
 
-  
+  // Add this function to update window position
+  const updateWindowPosition = (id: string, x: number, y: number) => {
+    setOpenWindows((prev) =>
+      prev.map((window) =>
+        window.id === id ? { ...window, position: { x, y } } : window
+      )
+    );
+  };
 
   const desktopIcons = [
     {
@@ -186,7 +192,7 @@ const Desktop = () => {
         }}
       >
         {/* Desktop Icons */}
-        <div className="p-4 grid grid-cols-6 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="flex justify-between items-start px-16">
           {desktopIcons.map((icon) => (
             <DesktopIcon
               key={icon.id}
@@ -207,7 +213,7 @@ const Desktop = () => {
             onMinimize={() => handleMinimizeWindow(window.id)}
             onMaximize={() => handleMaximizeWindow(window.id)}
             onFocus={() => handleWindowFocus(window.id)}
-            onDrag={(x, y) => updateWindowPosition(window.id, x, y)} // ✅ NEW PROP
+            onDrag={(x, y) => updateWindowPosition(window.id, x, y)}
           />
         ))}
         <StartTooltip />
@@ -236,7 +242,6 @@ const Desktop = () => {
           onItemClick={(window) => {
             handleOpenWindow(window);
 
-            // ✅ Let React finish setting window state before closing the menu
             setTimeout(() => {
               setIsStartMenuOpen(false);
             }, 50);
