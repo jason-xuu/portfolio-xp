@@ -1,42 +1,43 @@
-
 import React from 'react';
 
 const ExperienceContent: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      role: "Software Engineer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Developing full-stack web applications and implementing machine learning solutions for client projects.",
+      role: "Full-Stack Intern",
+      company: "OmniSynk AI",
+      period: "July 2024 – February 2025",
+      location: "",
+      description: "Developed features for 1,500+ e-commerce listings, enhancing operational efficiency by 30%.",
       achievements: [
-        "Led development of a facial recognition system for security applications",
-        "Optimized database queries resulting in 40% faster performance",
-        "Mentored junior developers and conducted code reviews"
+        "Designed and deployed RESTful APIs for real-time inventory management, reducing response times by 25%.",
+        "Enhanced UI components using React, CSS, and SCSS to improve page load speeds by 15%.",
+        "Collaborated in Agile sprints, delivering high-quality software on tight deadlines."
       ]
     },
     {
       id: 2,
-      role: "Software Engineering Intern",
-      company: "DataSolutions Corp",
-      period: "Summer 2020",
-      description: "Worked on data processing pipelines and contributed to front-end development.",
+      role: "AI/ML Research Intern",
+      company: "MBDA Federal Procurement Center",
+      period: "June 2023 - August 2023",
+      location: "Washington D.C.",
+      description: "Researched machine learning and distributed storage technologies to identify 20+ opportunities for minority business enterprises (MBEs).",
       achievements: [
-        "Built data visualization components using React",
-        "Implemented automated testing for critical components",
-        "Documented API endpoints for team reference"
+        "Authored a 10-page analysis report on generative AI and transfer learning, presenting 5 federal market applications.",
+        "Promoted AI/ML adoption among MBEs, resulting in a 15% increase in technology integration."
       ]
     },
     {
       id: 3,
       role: "Research Assistant",
-      company: "University AI Lab",
-      period: "2019 - 2020",
-      description: "Assisted in research projects focused on computer vision and natural language processing.",
+      company: "Seattle University",
+      period: "June 2022 - August 2022",
+      location: "Seattle, WA",
+      description: "Automated data collection and analysis from 50+ retirement communities using Python, improving data accuracy and efficiency.",
       achievements: [
-        "Co-authored research paper on image classification techniques",
-        "Developed data collection scripts for training models",
-        "Presented findings at university research symposium"
+        "Conducted data mining and analysis in Excel, driving a 15% increase in program enrollment through actionable insights.",
+        "Used pandas and matplotlib to generate visual reports for stakeholder presentations.",
+        "Maintained version control of research scripts and data notebooks using Git."
       ]
     }
   ];
@@ -84,10 +85,10 @@ const ExperienceContent: React.FC = () => {
       <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
         <h3 className="font-semibold text-blue-800 mb-2">Education</h3>
         <div className="flex justify-between items-center mb-1">
-          <div className="font-medium">B.S. Computer Science</div>
-          <div className="text-sm text-gray-600">2017 - 2021</div>
+          <div className="font-medium">B.S. in Computer Science</div>
+          <div className="text-sm text-gray-600">University of Washington</div>
         </div>
-        <div className="text-gray-600">University of Technology</div>
+        <div className="text-gray-600">Relevant Courses: Data Structures, Algorithms, Database Systems, Operating Systems, Discrete Mathematics</div>
       </div>
     </div>
   );
