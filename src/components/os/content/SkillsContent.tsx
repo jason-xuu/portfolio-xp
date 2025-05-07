@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const SkillsContent: React.FC = () => {
@@ -14,6 +13,9 @@ const SkillsContent: React.FC = () => {
         { name: "HTML/CSS", level: 90 },
         { name: "Tailwind CSS", level: 85 },
         { name: "Redux", level: 80 },
+        { name: "Jest", level: 85 },
+        { name: "REST APIs", level: 80 },
+        { name: "PyTorch", level: 70 },
       ],
     },
     {
@@ -25,8 +27,11 @@ const SkillsContent: React.FC = () => {
         { name: "Express", level: 80 },
         { name: "Python", level: 90 },
         { name: "Django", level: 75 },
-        { name: "RESTful APIs", level: 90 },
-        { name: "GraphQL", level: 70 },
+        { name: "Flask", level: 75 },
+        { name: "SQL", level: 85 },
+        { name: "Go", level: 70 },
+        { name: "Rust", level: 65 },
+        { name: "Kotlin", level: 60 },
       ],
     },
     {
@@ -40,6 +45,10 @@ const SkillsContent: React.FC = () => {
         { name: "NumPy", level: 85 },
         { name: "Data Visualization", level: 80 },
         { name: "Statistical Analysis", level: 75 },
+        { name: "Matlab", level: 70 },
+        { name: "Apache Beam", level: 65 },
+        { name: "Hadoop", level: 70 },
+        { name: "Spark", level: 70 },
       ],
     },
     {
@@ -51,8 +60,12 @@ const SkillsContent: React.FC = () => {
         { name: "Docker", level: 80 },
         { name: "AWS", level: 75 },
         { name: "CI/CD", level: 70 },
-        { name: "Jest", level: 85 },
         { name: "Agile Methodologies", level: 80 },
+        { name: "Jira", level: 75 },
+        { name: "Jupyter", level: 80 },
+        { name: "Tableau", level: 75 },
+        { name: "BigQuery", level: 70 },
+        { name: "GCP", level: 70 },
       ],
     },
   ];
@@ -114,6 +127,9 @@ const SkillsContent: React.FC = () => {
             "Mentoring",
             "Public Speaking",
             "Networking",
+            "Languages: C++, Java, JavaScript, Python, R, Assembly, SQL, Go, Typescript, Rust, Kotlin, Matlab",
+            "Technologies: Docker, Flask, Git, Node.js, PyTorch, React.js, REST APIs",
+            "Tools: Apache Beam, Hadoop, Spark, BigQuery, GCP, Jira, Jupyter, Tableau"
           ].map((skill, index) => (
             <span
               key={index}
@@ -146,6 +162,30 @@ const SkillsContent: React.FC = () => {
               <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "85%" }}></div>
             </div>
           </div>
+          {[
+            { name: "C++", level: 80 },
+            { name: "Java", level: 80 },
+            { name: "JavaScript", level: 95 },
+            { name: "Python", level: 90 },
+            { name: "R", level: 75 },
+            { name: "Assembly", level: 60 },
+            { name: "SQL", level: 85 },
+            { name: "Go", level: 70 },
+            { name: "Typescript", level: 85 },
+            { name: "Rust", level: 65 },
+            { name: "Kotlin", level: 60 },
+            { name: "Matlab", level: 70 },
+          ].map((lang, idx) => (
+            <div key={lang.name} className="col-span-2">
+              <div className="flex justify-between mb-1">
+                <span className="text-sm font-medium text-gray-700">{lang.name}</span>
+                <span className="text-xs font-medium text-gray-500">{lang.level}%</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2.5">
+                <div className="bg-green-600 h-2.5 rounded-full" style={{ width: `${lang.level}%` }}></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
