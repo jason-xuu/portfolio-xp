@@ -39,7 +39,7 @@ const Taskbar = ({
   }, []);
 
   return (
-    <div className="h-12 bg-gradient-to-r from-winxp-taskbar to-winxp-start flex items-center justify-between px-1 border-t-2 border-white z-50">
+    <div className="h-12 bg-gradient-to-r from-winxp-taskbar to-winxp-start flex items-center justify-between px-1 z-50">
       {/* Start Button */}
       <button
         onClick={onStartClick}
