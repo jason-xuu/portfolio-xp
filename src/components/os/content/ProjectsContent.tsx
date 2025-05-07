@@ -1,35 +1,58 @@
-
 import React from 'react';
 
 const ProjectsContent: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: "Facial Recognition System",
-      description: "Developed a facial recognition system using deep learning for secure access control.",
-      technologies: ["Python", "TensorFlow", "OpenCV", "Flask"],
-      image: "👤🔍",
+      title: (
+        <a href="https://github.com/jason-xuu/Stock-Tracker-Project" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+          StockSense: Market Tracker Dashboard
+        </a>
+      ),
+      description: "Full-stack dashboard for real-time stock data, sentiment-based market analysis, and dynamic charting.",
+      technologies: ["React", "Tailwind CSS", "FastAPI", "yfinance", "Plotly.js"],
+      image: "📈",
+      period: "Feb 2025",
+      details: [
+        "Deployed a dashboard that fetches, analyzes, and visualizes stock data for any ticker, reducing lookup time by 80%.",
+        "Engineered sentiment-driven market state engine using news and trend data.",
+        "Integrated Axios, Plotly, and Render CI/CD for a responsive frontend with <1s load times."
+      ]
     },
     {
       id: 2,
-      title: "AI Prediction Model",
-      description: "Created predictive models for financial forecasting with high accuracy rates.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-      image: "📊🤖",
+      title: (
+        <a href="https://github.com/jason-xuu/calendar-plus" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+          CalendarPlus
+        </a>
+      ),
+      description: "Feature-rich calendar platform with dynamic event creation, agenda view, and multi-calendar support.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "shadcn-ui", "Vite", "Framer Motion"],
+      image: "📅",
+      details: [
+        "Deployed to 10+ production environments in 2 weeks.",
+        "Improved user scheduling efficiency by 40% in test groups.",
+        "Real-time search and responsive UI across devices.",
+        "Maintained CI/CD with GitHub Actions and Vercel."
+      ]
     },
     {
       id: 3,
+      title: (
+        <a href="https://www.linkedin.com/company/omnisynkai/" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
+          E-commerce Platform
+        </a>
+      ),
+      description: "Full-stack e-commerce solution with payment integration and inventory management.",
+      technologies: ["React", "Node.js", "Express", "MongoDB"],
+      image: "🛒💳",
+    },
+    {
+      id: 4,
       title: "Web Portfolio OS Simulation",
       description: "Interactive portfolio website designed as a Windows XP simulation.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       image: "💻🎨",
-    },
-    {
-      id: 4,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and inventory management.",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      image: "🛒💳",
     }
   ];
 
