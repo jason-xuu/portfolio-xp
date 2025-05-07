@@ -172,7 +172,7 @@ const Window = ({
       variants={variants}
       className="absolute"
       style={window.isMaximized
-        ? { top: 0, left: 0, right: 0, bottom: "48px" } // leave space for taskbar
+        ? { top: 0, left: 0, right: 0, bottom: 0 } // cover entire screen when maximized
         : {}}
     >
       {window.isMaximized ? (
@@ -182,7 +182,6 @@ const Window = ({
           nodeRef={nodeRef}
           handle=".window-title-bar"
           defaultPosition={window.position}
-          bounds="parent"
           onMouseDown={onFocus}
           onStop={(e, data) => {
             onFocus();
