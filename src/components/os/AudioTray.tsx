@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAudio } from "@/context/AudioContext";
 
@@ -11,6 +11,11 @@ const AudioTray = () => {
   } = useAudio();
 
   const [showTooltip, setShowTooltip] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowTooltip(false), 5000); // Auto-dismiss after 5 seconds
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative flex items-center space-x-1">

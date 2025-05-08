@@ -4,6 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const StartTooltip = () => {
   const [show, setShow] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(false), 5000); // Auto-dismiss after 5 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <AnimatePresence>
       {show && (
