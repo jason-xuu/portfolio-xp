@@ -107,7 +107,7 @@ html, body, #root {
     font-family: 'Tahoma', 'Segoe UI', sans-serif;
     user-select: none;
   
-    background-image: url('public/background/xp.png'); /* change the filename */
+    background-image: url('/background/xp.png'); /* fixed for GitHub Pages */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
