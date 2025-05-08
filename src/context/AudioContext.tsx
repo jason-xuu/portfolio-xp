@@ -33,7 +33,7 @@ import {
       }
   
       if (!bufferRef.current) {
-        const res = await fetch('/audio/lotuswaters.ogg');
+        const res = await fetch('/portfolio-xp/audio/lotuswaters.ogg');
         const arrayBuffer = await res.arrayBuffer();
         bufferRef.current = await audioContextRef.current.decodeAudioData(arrayBuffer);
       }
