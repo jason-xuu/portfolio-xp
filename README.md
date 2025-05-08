@@ -2,6 +2,8 @@
 
 A modern, interactive portfolio website inspired by the classic Windows XP interface. Built with React, TypeScript, and Vite.
 
+Visit the live site at [jsonxu.dev](https://jsonxu.dev)
+
 ## 🌟 Features
 
 - **Windows XP Interface**: Authentic Windows XP look and feel
@@ -74,10 +76,6 @@ portfolio-xp/
 - **Icons**: Modify desktop icons in `src/components/os/Desktop.tsx`
 - **Sounds**: Update audio files in `public/audio/`
 - **Colors**: Customize theme in `tailwind.config.ts`
-
-## 🌐 Live Demo
-
-Visit the live site at [jsonxu.dev](https://jsonxu.dev)
 
 ## 📝 License
 
