@@ -4,7 +4,7 @@ A modern, interactive portfolio website inspired by the classic Windows XP inter
 
 Visit the live site at [jsonxu.dev](https://jsonxu.dev)
 
-## 🌟 Features
+## Features
 
 - **Windows XP Interface**: Authentic Windows XP look and feel
 - **Interactive Desktop**: Drag-and-drop windows, minimize/maximize functionality
@@ -13,7 +13,7 @@ Visit the live site at [jsonxu.dev](https://jsonxu.dev)
 - **Responsive Design**: Works on both desktop and mobile devices
 - **Modern Tech Stack**: Built with React, TypeScript, and Vite
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Frontend Framework**: React 18
 - **Language**: TypeScript
@@ -26,7 +26,7 @@ Visit the live site at [jsonxu.dev](https://jsonxu.dev)
 - **Audio**: Web Audio API
 - **Deployment**: GitHub Pages with custom domain
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -56,7 +56,7 @@ Visit the live site at [jsonxu.dev](https://jsonxu.dev)
    npm run build
    ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio-xp/
@@ -70,24 +70,24 @@ portfolio-xp/
 └── dist/             # Production build output
 ```
 
-## 🎨 Customization
+## Customization
 
 - **Wallpaper**: Replace the wallpaper in `src/assets/winxp-wallpaper.ts`
 - **Icons**: Modify desktop icons in `src/components/os/Desktop.tsx`
 - **Sounds**: Update audio files in `public/audio/`
 - **Colors**: Customize theme in `tailwind.config.ts`
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 - **Jason Xu**
   - GitHub: [@jason-xuu](https://github.com/jason-xuu)
   - Portfolio: [jsonxu.dev](https://jsonxu.dev)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Windows XP design inspiration
 - [Shadcn UI](https://ui.shadcn.com/) for component library
