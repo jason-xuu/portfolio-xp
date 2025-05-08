@@ -1,12 +1,13 @@
-
 import React from 'react';
 
 const AboutContent: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
-        <div className="w-32 h-32 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center text-6xl border-4 border-blue-300">
-          👨‍💻
+        <div className="w-24 h-24 bg-white rounded-full overflow-hidden border-2 border-white">
+          <span className="text-6xl flex items-center justify-center h-full">
+            👦🏼
+          </span>
         </div>
         
         <div className="text-center sm:text-left">

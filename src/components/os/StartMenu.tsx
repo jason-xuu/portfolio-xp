@@ -109,7 +109,7 @@ const StartMenu = ({ onItemClick }: StartMenuProps) => {
       <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-4 text-white flex items-center">
         <div className="w-12 h-12 bg-white rounded-full overflow-hidden mr-3 border-2 border-white">
           <span className="text-4xl flex items-center justify-center h-full">
-            👨‍💻
+            👦🏼
           </span>
         </div>
         <div>
@@ -124,7 +124,8 @@ const StartMenu = ({ onItemClick }: StartMenuProps) => {
           <div
             key={item.window.id}
             className="flex items-center p-2 hover:bg-blue-100 rounded-md cursor-pointer transition-colors"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent closing the menu when clicking an item
               playClickSound(); // play click on item select
               onItemClick(item.window);
             }}

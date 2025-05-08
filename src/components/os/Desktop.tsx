@@ -12,20 +12,6 @@ const Desktop = () => {
   const [activeWindow, setActiveWindow] = useState<string | null>(null);
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
 
-  // Close start menu when clicking anywhere on the desktop
-  useEffect(() => {
-    const handleClickOutside = () => {
-      if (isStartMenuOpen) {
-        setIsStartMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isStartMenuOpen]);
-
   const handleOpenWindow = (window: WindowType) => {
     // Check if window is already open
     if (openWindows.some((w) => w.id === window.id)) {
@@ -183,7 +169,7 @@ const Desktop = () => {
     <div className="h-screen w-full flex flex-col overflow-hidden">
       <div 
         className="flex-grow relative overflow-hidden" 
-        onClick={() => setIsStartMenuOpen(false)}
+        onClick={() => isStartMenuOpen && setIsStartMenuOpen(false)}
         style={{ 
           backgroundImage: `url(${wallpaperBase64})`,
           backgroundSize: 'cover',
