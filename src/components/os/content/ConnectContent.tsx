@@ -62,20 +62,6 @@ const ConnectContent: React.FC = () => {
       url: "https://linkedin.com/in/jsonxuu",
       description: "Connect with me professionally",
     },
-    {
-      id: "portfolio",
-      name: "Portfolio",
-      icon: "🌐",
-      url: "https://jason-xuu.github.io/portfolio/",
-      description: "View my official portfolio website",
-    },
-    {
-      id: "email",
-      name: "Email",
-      icon: "✉️",
-      url: "mailto:jasonxu.coding@gmail.com",
-      description: "Send me a message directly",
-    },
   ];
 
   return (
